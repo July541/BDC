@@ -1,6 +1,7 @@
 module Words where
 
 import System.IO
+import Data.Char(toLower)
 
 type WordPair = (String, String)
 type WordPairs = [WordPair]
@@ -12,7 +13,7 @@ en :: WordPair -> String
 en = snd
 
 checkSpell :: WordPair -> String -> Bool
-checkSpell w s = (en w) == s
+checkSpell w s = (map toLower $ en w) == (map toLower s)
 
 printBaseInfo :: Int -> Int -> String
 printBaseInfo finishedCount totalCount = "[" ++ show finishedCount ++ "/" ++ show totalCount ++ "]"
