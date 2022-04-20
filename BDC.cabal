@@ -7,8 +7,8 @@ version:             0.1.0.0
 -- description:
 license:             BSD3
 license-file:        LICENSE
-author:              July541
-maintainer:          zhulei1995@126.com
+author:              Lei Zhu
+maintainer:          julytreee@gmail.com
 -- copyright:
 category:            Text
 build-type:          Simple
@@ -16,17 +16,17 @@ extra-source-files:  ChangeLog.md
 cabal-version:       >=1.10
 
 library
-  -- exposed-modules:
+  exposed-modules: BDC.Types, BDC.Logic, BDC.DataLoader
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.7 && <5
-  hs-source-dirs:      src
+  build-depends:       base >=4.7 && <5, text >=2.0, time, transformers, data-default, ansi-terminal
+  hs-source-dirs:      lib
   default-language:    Haskell2010
 
 executable BDC
   main-is:             Main.hs
-  other-modules:       Words, Message, DataLoader
+  -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.7 && <5
+  build-depends:       base >=4.7 && <5, text, BDC
   hs-source-dirs:      src
   default-language:    Haskell2010

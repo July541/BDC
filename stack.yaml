@@ -1,0 +1,8 @@
+resolver: nightly-2022-04-12
+
+extra-deps:
+- text-2.0
+
+ghc-options:
+
+flags:
