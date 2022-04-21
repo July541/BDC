@@ -2,20 +2,18 @@
 {-# LANGUAGE RecordWildCards     #-}
 
 module BDC.Logic where
-import           BDC.Types                  (BDCEnv, BDCRecord (..),
-                                             Recited (Recited),
-                                             Word (Word, from, to),
-                                             initialBDCRecord)
-import           Control.Monad.IO.Class     (MonadIO, liftIO)
-import           Control.Monad.Trans.Reader (ReaderT (..), ask)
-import           Control.Monad.Trans.State  (StateT (runStateT), get, put)
-import qualified Data.Text                  as T
-import           Data.Time                  (getCurrentTime)
-import           Prelude                    hiding (Word)
-import           System.Console.ANSI        (Color (Green, Red, Yellow),
-                                             ColorIntensity (Vivid),
-                                             ConsoleLayer (Foreground),
-                                             SGR (Reset, SetColor), setSGR)
+import           BDC.Types                 (BDCEnv, BDCRecord (..),
+                                            Recited (Recited), Word (..),
+                                            initialBDCRecord)
+import           Control.Monad.IO.Class    (MonadIO, liftIO)
+import           Control.Monad.Trans.State (StateT (runStateT), get, put)
+import qualified Data.Text                 as T
+import           Data.Time                 (getCurrentTime)
+import           Prelude                   hiding (Word)
+import           System.Console.ANSI       (Color (Green, Red, Yellow),
+                                            ColorIntensity (Vivid),
+                                            ConsoleLayer (Foreground),
+                                            SGR (Reset, SetColor), setSGR)
 
 checkAll :: [Word] -> IO BDCRecord
 checkAll words = do

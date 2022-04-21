@@ -1,10 +1,10 @@
-{-# LANGUAGE RecordWildCards   #-}
-module BDC.DataLoader where
+{-# LANGUAGE RecordWildCards #-}
+module BDC.DataLoader (loadDataFromTxt) where
 
 import           BDC.Types                 (LoadLog (..), Word (Word), Words)
 import           Control.Monad             (forM)
 import           Control.Monad.IO.Class    (MonadIO (liftIO))
-import           Control.Monad.Trans.State (StateT (runStateT), modify, evalStateT)
+import           Control.Monad.Trans.State (StateT (runStateT), modify)
 import qualified Data.Text                 as T
 import           Data.Time                 (getCurrentTime)
 
@@ -31,5 +31,6 @@ loadDataFromTxt' path = do
                 logs = logs <> e
             })
 
+-- Load data from a text file
 loadDataFromTxt :: FilePath -> IO (Words, LoadLog)
 loadDataFromTxt path = runStateT (loadDataFromTxt' path) mempty
