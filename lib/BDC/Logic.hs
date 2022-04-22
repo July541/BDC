@@ -65,3 +65,6 @@ checkOneWord word = do
             })
         updateSuccess = update (+1) id
         updateFail = update id (+1)
+
+checkOneWordWithRepeat :: MonadIO m => Word -> BDCEnv m
+checkOneWordWithRepeat = undefined

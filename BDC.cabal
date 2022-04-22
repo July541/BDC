@@ -29,9 +29,9 @@ library
 
 executable BDC
   main-is:             Main.hs
-  -- other-modules:
+  other-modules: Parser
   -- other-extensions:
-  build-depends:       base >=4.7 && <5, text, BDC
+  build-depends:       base >=4.7 && <5, text, BDC, optparse-applicative
   hs-source-dirs:      src
   ghc-options: -Wall -Wno-name-shadowing
   default-language:    Haskell2010

@@ -69,11 +69,11 @@ instance Monoid LoadLog where
 
 data Arguments = Arguments {
     dataPath           :: Text,
-    reversed           :: Bool,
     random             :: Bool,
     repeatUntilCorrect :: Bool,
-    verbose            :: Bool,
-    limited            :: Maybe Int
+    reversed           :: Bool,
+    limited            :: Maybe Int,
+    verbose            :: Bool
     -- ^ Limited word count
 } deriving (Show)
 
