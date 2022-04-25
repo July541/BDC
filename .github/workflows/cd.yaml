@@ -1,0 +1,19 @@
+name: Release Words
+
+on:
+  push:
+    tags:
+      - word-v**
+
+jobs:
+  deploy:
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Zip
+        run: zip -r data data/
+
+      - name: Release Words
+        uses: softprops/action-gh-release@v1
+        with:
+          files: data.zip
