@@ -1,10 +1,10 @@
 ARCH=$(shell uname -m)
 UNAME=$(shell uname | tr 'A-Z' 'a-z')
 
-ifeq ($(UNAME), msys_nt-10.0-20348)
+ifeq ($(UNAME), mingw64_nt-10.0-20348)
 BDC_BINARY=C:\cabal\bin\BDC.exe
 else
-BDC_BINARY=$(HOME)/.cabal/bin/BDC
+BDC_BINARY=C:\cabal\bin\BDC.exe
 endif
 BDC_TAG=v$(shell sed -n 's/^version: *//p' *.cabal)
 BDC_PACKAGE=BDC-$(BDC_TAG)-$(UNAME)-$(ARCH)
