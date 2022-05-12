@@ -18,6 +18,9 @@ jobs:
 
     - uses: actions/checkout@v3
 
+    - name: "Show uname"
+      run: uname | tr 'A-Z' 'a-z'
+
     - uses: haskell/actions/setup@v2
       name: Setup Haskell Cabal
       with:
