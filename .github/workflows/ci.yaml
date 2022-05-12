@@ -62,6 +62,9 @@ jobs:
       with:
         name: artifacts
 
+    - name: Display structure of downloaded files
+      run: ls -R
+
     - name: Upload Linux Asset
       uses: softprops/action-gh-release@v1
       with: ./BDC-${{ steps.get_version.outputs.version }}-linux-x86_64.tar.gz
