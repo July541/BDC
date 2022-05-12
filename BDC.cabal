@@ -25,7 +25,7 @@ library
                      , random-shuffle
   hs-source-dirs:      lib
   ghc-options: -Wall -Wno-name-shadowing
-  default-language:    Haskell2010
+  default-language:    GHC2021
 
 executable BDC
   main-is:             Main.hs
@@ -34,4 +34,4 @@ executable BDC
   build-depends:       base >=4.7 && <5, text, BDC, optparse-applicative
   hs-source-dirs:      src
   ghc-options: -Wall -Wno-name-shadowing
-  default-language:    Haskell2010
+  default-language:    GHC2021
