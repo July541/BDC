@@ -1,6 +1,6 @@
 cabal-version:       2.4
 name:                BDC
-version:             0.0.0.6
+version:             0.0.0.7
 -- synopsis:
 -- description:
 license:             BSD-3-Clause
