@@ -67,13 +67,13 @@ jobs:
 
     - name: Upload Linux Asset
       uses: softprops/action-gh-release@v1
-      with: ./BDC-${{ steps.get_version.outputs.version }}-linux-x86_64.tar.gz
+      with: BDC-${{ steps.get_version.outputs.version }}-linux-x86_64.tar.gz
 
     - name: Upload MacOS Asset
       uses: softprops/action-gh-release@v1
-      with: ./BDC-${{ steps.get_version.outputs.version }}-darwin-x86_64.zip
+      with: BDC-${{ steps.get_version.outputs.version }}-darwin-x86_64.zip
 
     - name: Upload Windows Asset
       uses: softprops/action-gh-release@v1
-      with: ./BDC-${{ steps.get_version.outputs.version }}-windows-x86_64.zip
+      with: BDC-${{ steps.get_version.outputs.version }}-windows-x86_64.zip
 

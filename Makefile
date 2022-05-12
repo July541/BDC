@@ -2,7 +2,7 @@ ARCH=$(shell uname -m)
 UNAME=$(shell uname | tr 'A-Z' 'a-z')
 
 BDC_BINARY=$(HOME)/.cabal/bin/BDC
-BDC_TAG=v$(shell sed -n 's/^Version: *//p' *.cabal)
+BDC_TAG=v$(shell sed -n 's/^version: *//p' *.cabal)
 BDC_PACKAGE=BDC-$(BDC_TAG)-$(UNAME)-$(ARCH)
 
 UPX_VERSION=3.94
