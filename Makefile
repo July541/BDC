@@ -1,7 +1,7 @@
 ARCH=$(shell uname -m)
 UNAME=$(shell uname | tr 'A-Z' 'a-z')
 
-ifeq ($(UNAME), mingw64)
+ifeq ($(UNAME), mingw64_nt)
 BDC_BINARY=C:\cabal\bin\BDC.exe
 else
 BDC_BINARY=$(HOME)/.cabal/bin/BDC
